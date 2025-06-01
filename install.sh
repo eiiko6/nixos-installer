@@ -12,7 +12,7 @@ partprobe ${DISK}                                                   # reread par
 mkfs.fat -F32 -n "BOOT" ${DISK}1
 mkfs.ext4 -F -L "ROOT" ${DISK}2
 
-mount ${DISK}3 /mnt
+mount ${DISK}2 /mnt
 mount --mkdir ${DISK}1 /mnt/boot
 
 nixos-generate-config --root /mnt
